@@ -3,6 +3,7 @@ import React from "react";
 
 function Card(props) {
     return (
+      <li>
         <div className="card">
         <img src={props.image} className="card-img-left" alt="..." />
         <div className="card-body">
@@ -17,7 +18,7 @@ function Card(props) {
           <p className="card-text">Categories: {props.categories}</p>
         </div>
       </div>
- 
+      </li>
     )
 }
 
