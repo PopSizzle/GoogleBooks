@@ -1,11 +1,16 @@
 {
-  "name": "googlebooks",
+  "name": "server",
   "version": "1.0.0",
   "description": "Search for books and save them",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -14,10 +19,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "concurrently": "5.1.0"
+  },
   "bugs": {
     "url": "https://github.com/PopSizzle/GoogleBooks/issues"
   },
-  "homepage": "https://github.com/PopSizzle/GoogleBooks#readme",
+  "homepage": "https://github.com/PopSizzle/GoogleBooks",
   "dependencies": {
     "app": "^0.1.0",
     "routes": "^2.1.0",
