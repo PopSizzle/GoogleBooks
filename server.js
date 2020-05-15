@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // connect to mongo~
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/todolist");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
 // start server
 app.listen(PORT, () => console.log("Server listening on port: " + PORT))
