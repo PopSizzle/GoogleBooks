@@ -9,9 +9,7 @@ import API from "../utils/API";
 const Saved = () => {
     const [savedBooks, setSavedBooks] = useState([]);
 
-    useEffect(() => {
-        loadBooks();
-    }, []);
+    
 
     function loadBooks() {
         API.getBooks()
@@ -20,6 +18,10 @@ const Saved = () => {
                 console.log(savedBooks);
             }).catch(err => console.log(err));
     }
+
+    useEffect(() => {
+        loadBooks();
+    }, []);
 
     return (
         <div className="Saved">
