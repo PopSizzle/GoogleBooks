@@ -1,10 +1,10 @@
 import React from "react";
 
 
-function Container({props}) {
+function Container(props) {
     return (
         <div className="row justify-content-md-center col-md-8 col-sm-10">
-            {props}
+            {props.children}
         </div>
 
     )
