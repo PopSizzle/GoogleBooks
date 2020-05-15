@@ -7,6 +7,7 @@ router
   .get(bookController.find)
   .post(bookController.create)
 
+// Matches with "api/books/:id"
 router
   .route("/:id")
   .update(bookController.findById)
