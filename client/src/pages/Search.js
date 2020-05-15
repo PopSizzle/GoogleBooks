@@ -10,7 +10,7 @@ const Search = () => {
     const [searchObject, setSearchObject] = useState({});
 
     useEffect(() => {
-        this.loadBooks("harrypotter");
+        loadBooks("harrypotter");
     }, []);
 
     function loadBooks(search) {
