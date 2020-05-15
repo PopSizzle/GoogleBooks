@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Jumbotron from "../components/Jumbotron/index";
 import Container from "../components/Container/index"
 import Card from "../components/Card/index"
