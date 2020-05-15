@@ -18,12 +18,12 @@ export default {
 
     // Saves book to favorites database
     saveBook: function(bookData) {
-        return axios.post("/api/post", postData);
-    }
+        return axios.post("/api/post", bookData);
+    },
 
     // Get Google books
-    // getGoogleBooks: function(search) {
-    //     return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + search);
-    // },
+    getGoogleBooks: function(search) {
+        return axios.get("/google?=q" + search)
+    },
 
 }
