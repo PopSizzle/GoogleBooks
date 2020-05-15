@@ -1,5 +1,5 @@
 {
-  "name": "GoogleBooks",
+  "name": "googlebooks",
   "version": "1.0.0",
   "description": "Search for books and save them",
   "main": "server.js",
@@ -20,7 +20,7 @@
   "homepage": "https://github.com/PopSizzle/GoogleBooks#readme",
   "dependencies": {
     "app": "^0.1.0",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "mongoose": "^5.9.14"
