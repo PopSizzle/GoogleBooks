@@ -1,0 +1,26 @@
+{
+  "name": "GoogleBooks",
+  "version": "1.0.0",
+  "description": "Search for books and save them",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PopSizzle/GoogleBooks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PopSizzle/GoogleBooks/issues"
+  },
+  "homepage": "https://github.com/PopSizzle/GoogleBooks#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.14"
+  }
+}
