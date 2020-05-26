@@ -6,5 +6,5 @@ const Google = require("./google");
 router.use("/books", Books);
 
 // route to get books from google API
-router.use("/google", Google);
+router.use("/search", Google);
 module.exports = router;
