@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Jumbotron from "../components/Jumbotron/index";
 import Container from "../components/Container/index"
 import Card from "../components/Card/index"
-import List from "../components/List/index"
 import API from "../utils/API";
 
 const Search = () => {
@@ -10,14 +9,14 @@ const Search = () => {
     const [searchObject, setSearchObject] = useState({});
 
     useEffect(() => {
-        loadBooks("harrypotter");
+        loadBooks("HarryPotter");
     }, []);
 
     function loadBooks(search) {
         API.getGoogleBooks(search)
             .then((response) => {
-                setBooks(response.items);
-                console.log(books);
+                setBooks(response.data.items);
+                console.log(response.data.items)
             }).catch(err => console.log(err));
     }
 
@@ -38,13 +37,11 @@ const Search = () => {
                 </form>
             </Container>
             <Container>
-                <List>
                     {books.map(book => {
                         return (
-                            <Card key={book} />
+                            <Card data={book.volumeInfo} key={book.id} />
                         )
                     })}
-                </List>
             </Container>
         </div>
     );

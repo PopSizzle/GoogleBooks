@@ -1,0 +1,16 @@
+img {
+    width: 100px;
+}
+
+.btn-primary{
+    float: right;
+    border: white;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+}
+
+.card{
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

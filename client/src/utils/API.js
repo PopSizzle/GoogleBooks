@@ -3,12 +3,12 @@ import axios from "axios";
 export default {
     // Gets all saved books
     getBooks: function() {
-        return axios.get("/api/books");
+        return axios.get("api/books");
     },
 
     // Gets the book with the given id
     getBook: function(id) {
-        return axios.get("/api/books" + id);
+        return axios.get("api/books" + id);
     },
 
     // Deletes the book with the given id
@@ -18,12 +18,12 @@ export default {
 
     // Saves book to favorites database
     saveBook: function(bookData) {
-        return axios.post("/api/post", bookData);
+        return axios.post("/api/books", bookData);
     },
 
     // Get Google books
     getGoogleBooks: function(search) {
-        return axios.get("/google?=q" + search)
-    },
+        return axios.get("api/search/" + search)
+    }
 
 }

@@ -1,40 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import Jumbotron from "../components/Jumbotron/index";
 import Container from "../components/Container/index"
-import Card from "../components/Card/index"
-import List from "../components/List/index"
+import SavedCard from "../components/Card/savedCard"
 import API from "../utils/API";
 
 
-const Saved = () => {
+function Saved(){
     const [savedBooks, setSavedBooks] = useState([]);
-
-    
-
-    function loadBooks() {
-        API.getBooks()
-            .then((response) => {
-                setSavedBooks(response);
-                console.log(savedBooks);
-            }).catch(err => console.log(err));
-    }
 
     useEffect(() => {
         loadBooks();
     }, []);
 
+    function loadBooks() {
+        API.getBooks()
+            .then((response) => {
+                setSavedBooks(response.data);
+            }).catch(err => console.log(err));
+    }
+
+  
     return (
         <div className="Saved">
             <Container>
                 <Jumbotron />
             </Container>
-            <List>
                 {savedBooks.map(book => {
                     return (
-                        <Card key={book} />
+                        <SavedCard data={book} key={book._id} />
                     )
                 })}
-            </List>
         </div>
     );
 }
