@@ -32,7 +32,7 @@ const Search = () => {
             </Container>
             <Container>
                 <form onSubmit={handleSubmit}>
-                    <input className="form-control form-control-lg" type="search" placeholder=".form-control-lg" onChange={(e) => setSearchObject(e.target.value)} />
+                    <input className="form-control form-control-lg" type="search" placeholder="Search Books" onChange={(e) => setSearchObject(e.target.value)} />
                 </form>
             </Container>
             <Container>

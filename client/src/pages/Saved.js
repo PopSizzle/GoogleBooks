@@ -24,12 +24,12 @@ function Saved(){
         <div className="Saved">
             <Container>
                 <Jumbotron />
-            </Container>
                 {savedBooks.map(book => {
                     return (
                         <SavedCard data={book} key={book._id} />
                     )
                 })}
+            </Container>
         </div>
     );
 }
