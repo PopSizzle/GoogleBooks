@@ -38,7 +38,7 @@ function Card(prop) {
       <div className="card-body">
         <h5 className="card-title">{props.title}</h5>
         <p className="card-text">Authors: {props.authors}</p>
-        <button href={props.previewLink} target="_link" className="btn btn-primary">View</button>
+        <a type="button" href={props.previewLink} target="_blank" className="btn btn-primary">View</a>
         <button className="btn btn-primary" onClick={() => addCard()}>Add</button>
 
         <div className="container">

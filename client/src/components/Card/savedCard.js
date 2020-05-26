@@ -3,14 +3,14 @@ import "./card.css"
 import API from "../../utils/API";
 
 
-
 function SavedCard(prop) {
   let props = prop.data;
-
+  console.log(props.link);
   function deleteCard(id) {
     API.deleteBook(id)
       .then(res => {
           console.log(res)
+        window.location.reload();
         })
       .catch(err => console.log(err))
   }
@@ -21,7 +21,7 @@ function SavedCard(prop) {
         <div className="card-body">
         <h5 className="card-title">{props.title}</h5>
                 <p className="card-text">Authors: {props.authors}</p>
-                <button href={props.link} target="_link" className="btn btn-primary">View</button>
+                <a type="button" href={props.link} target="_blank" className="btn btn-primary">View</a>
                 <button className="btn btn-primary" id={props._id} onClick={() => deleteCard(props._id)}>Delete</button>
 
           <div className="container">

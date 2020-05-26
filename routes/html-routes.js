@@ -2,8 +2,9 @@ var db = require("../models");
 
 module.exports = function (app) {
 
-    app.get("/", function (req, res) {
-        res.sendFile(path.join(__dirname, "../client/build/index.html"))
-    });
-
+    if (process.env.NODE_ENV === "production") {
+        router.use(function (req, res) {
+            res.sendFile(path.join(__dirname, "../client/build/index.html"))
+        })
+    }
 }
