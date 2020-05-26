@@ -16,7 +16,6 @@ const Search = () => {
         API.getGoogleBooks(search)
             .then((response) => {
                 setBooks(response.data.items);
-                console.log(response.data.items)
             }).catch(err => console.log(err));
     }
 

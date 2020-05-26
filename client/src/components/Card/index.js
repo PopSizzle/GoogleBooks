@@ -8,17 +8,12 @@ function Card(prop) {
   let props = prop.data;
   let image;
 
-  console.log(props.imageLinks)
-
   if (props.imageLinks) {
     image = props.imageLinks.thumbnail
   }
   else{
     image="#"
   }
-
-
-
 
   let card = {
     title: props.title,
